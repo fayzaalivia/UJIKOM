@@ -78,35 +78,33 @@ if (isset($_POST['proses_pengaduan'])) {
                 <div class="table-responsive pt-3">
                     <table class="table table-dark">
                     <?php if ($_SESSION['level'] == 'masyarakat') { ?>
-                    <div class="card">
-                        <div class="card-header">
-                            <button data-toggle="modal" data-target="#modal-lg" class="btn btn-success">buat pengaduan&nbsp;<i class="fa fa-pen"></i></button>
-                        </div>
-                    </div>
+                        
+                        <button data-toggle="modal" data-target="#modal-lg" class="btn btn-success">buat pengaduan&nbsp;<i class="fa fa-pen"></i></button>
                     <?php } ?>
-                    <div class="modal fade" id="modal-lg">
-                        <div class="modal-dialog modal-lg">
+                    <div class="modal fade" id="modal-lg" <?= $d->isi_laporan ?>>
+                        <div class="modal-dialog modal-lg"<?= $d->isi_laporan ?>>
                             <div class="modal-content">
                                 <div class="modal-header">
                                  Buat Pengaduan
                                 </div>
                                 <div class="modal-body">
                                     <form action="" method="post" enctype="multipart/form-data">
-                                        <input type="hidden" name="nik" value="">
+                                        <input type="hidden" name="nik" value="<?= $d->isi_laporan ?>>">
                                            <div class="form-group">
                                                 <label for="isi_laporan">Isi Laporan</label>
-                                                <textarea name="isi_laporan" class="form-control" cols="30" rows="10"></textarea>
+                                                <textarea name="isi_laporan" class="form-control" cols="30" rows="10" value="<?= $d->isi_laporan ?>>"></textarea>
                                             </div>
                                             <div class="form-group">
                                                 <label for="tgl_pengaduan">Tanggal Pengaduan</label>
-                                                <input type="date" name="tgl_pengaduan" class="form-control">
+                                                <input type="date" name="tgl_pengaduan" class="form-control" value="<?= $d->tgl_laporan ?>>">
                                             </div>
                                             <div class="form-group">
                                                 <label for="foto">Foto</label>
-                                                <input type="file" name="foto" class="form-control">
+                                                <input type="file" name="foto" class="form-control" value="<?= $d->foto ?>>">
                                             </div>
                                                 <input type="submit" name="tambahPengaduan" value="simpan" class="btn btn-success">
-                                            </form>
+                                            </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

@@ -21,12 +21,12 @@
     <!-- End custom js for this page-->
 
      <!-- jQuery -->
- <script src="../../assets/plugins/jquery/jquery.min.js"></script>
+ <script src="../../assets/vendors/jquery-file-upload/jquery.uploadfile.min.js"></script>
  <!-- jQuery UI 1.11.4 -->
- <script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+ <script src="../../assets/vendors/jquery-tags-input/jquery.tagsinput.min.css"></script>
  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
  <script>
      $.widget.bridge('uibutton', $.ui.button)
  </script>
  <!-- Bootstrap 4 -->
- <script src="../../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="../../assets/vendors/jquery-validation/jquery.validate.min.js"></script>

@@ -31,7 +31,7 @@ if (empty($_SESSION['username'])) {
                         <div class="alert alert-success alert-dismissable">Selamat Datang <strong><?= $_SESSION['username'] ?></strong> anda Login Sebagai <strong><?= $_SESSION['level'] ?></strong></div>
                         <div class="card">
                             <div class="card-header">
-                                <i class="fa fa-user-circle"></i><strong>Profil</strong>
+                                <i class="fa fa-user"></i><strong> Profil</strong>
                             </div>
                             <div class="card-body">
                                 <div class="card col-md-auto">
